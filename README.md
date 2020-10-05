@@ -1,2 +1,1 @@
-# 07223_PBO
-Pemrograman Berbasis Objek
+# Pemrograman Berbasis Objek
