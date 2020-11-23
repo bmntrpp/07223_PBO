@@ -1,13 +1,14 @@
 package aldo07223;
 
+import Entity_07223.*;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
 
 public class Aldo07223_PES2021 {
-    static ArrayList <Aldo07223_PesertaEntity> datapeserta = new ArrayList();
-    static Scanner input = new Scanner(System.in);
+    public static ArrayList <Aldo07223_PlayerAbstractEntity> datapeserta = new ArrayList();
+    public static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
         Aldo07223_PES2021 program = new Aldo07223_PES2021();
@@ -57,7 +58,7 @@ public class Aldo07223_PES2021 {
         }
         System.out.print("Pilih Team = ");
         int indexucl = input.nextInt();
-        datapeserta.add(new Aldo07223_PesertaEntity(nama,region,email,nohp,tanggal,indexucl));
+        datapeserta.add(new Aldo07223_PlayerAbstractEntity(nama,region,email,nohp,tanggal,indexucl));
 
 }
     void view(){
@@ -95,8 +96,8 @@ public class Aldo07223_PES2021 {
         }
         System.out.print("Pilih Team = ");
         int indexucl = input.nextInt();
-        Aldo07223_PesertaEntity update = new Aldo07223_PesertaEntity(nama,region,email,nohp,
+        Aldo07223_PlayerAbstractEntity update = new Aldo07223_PlayerAbstractEntity(nama,region,email,nohp,
                                                 tanggal,indexucl); //jika data banyak
-                datapeserta.set(indexdata,update);//new Aldo07223_PesertaEntity(nama,region,email,nohp,tanggal,indexucl)); Dibuat Data jika sedikit
+                datapeserta.set(indexdata,update);//new Aldo07223_PlayerAbstractEntity(nama,region,email,nohp,tanggal,indexucl)); Dibuat Data jika sedikit
     }
 }
