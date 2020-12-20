@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Main_07223;
 import Entity_07223.*;
 import Model_07223.*;
@@ -10,10 +6,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
-/**
- *
- * @author aldo
- */
+
 public class PES2021_07223 {
     
     static ArrayList<Peserta_07223> dataPeserta = new ArrayList();
@@ -56,7 +49,7 @@ public class PES2021_07223 {
          String nama_peserta = input.next();
          System.out.print("input nickname peserta = ");
          String nickname_peserta = input.next();
-         System.out.print("input tgl lahir (dd/mm/yyyy) = ");
+         System.out.print("input tgl lahir (mm/dd/yyyy) = ");
          Date tanggal_lahir = new Date(input.next());
          System.out.print("input email = ");
          String email = input.next();
@@ -80,9 +73,9 @@ public class PES2021_07223 {
             System.out.println("==========================================================");
             System.out.println("Data Peserta:"+i);
             System.out.println("Nama = "+dataPeserta.get(i).getNama_Peserta());
-            System.out.println("Tanggal Lahir = "+new SimpleDateFormat("mm-dd-yyyy").format(dataPeserta.get(i).getTanggal_Lahir()));
+            System.out.println("Tanggal Lahir = "+new SimpleDateFormat("dd-mm-yyyy").format(dataPeserta.get(i).getTanggal_Lahir()));
             System.out.println("Nickname = "+dataPeserta.get(i).getNickname_Peserta());
-            System.out.println("Paket Cuci = "+UCLTeam_07223.UCLTeam[dataPeserta.get(i).indexUCL]);
+            System.out.println("Pilihan Team = "+UCLTeam_07223.UCLTeam[dataPeserta.get(i).UCLTeam_07223()]);
             System.out.println("E-mail = "+dataPeserta.get(i).getEmail());
             System.out.println("Region = "+dataPeserta.get(i).getRegion());
             System.out.println("No HP = "+dataPeserta.get(i).getNo_Hp());

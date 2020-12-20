@@ -17,10 +17,10 @@ public class Peserta_07223 {
     String email;
     String region;
     String no_hp;
-    int indexUCL;
+    String indexUCL;
     
     public Peserta_07223(String nama_peserta,String nickname_peserta,Date tanggal_lahir,
-                         String email,String region,String no_hp,int indexUCL){
+                         String email,String region,String no_hp,String indexUCL){
         
         this.nama_peserta=nama_peserta;
         this.nickname_peserta=nickname_peserta;
@@ -55,7 +55,7 @@ public class Peserta_07223 {
         return no_hp;
     }
     
-    public int getindexUCL() {
+    public String getindexUCL() {
         return indexUCL;
     }
 }
