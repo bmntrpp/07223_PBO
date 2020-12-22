@@ -1,26 +1,23 @@
 package Model07223;
 
-import Entity07223.BarangKeluar07223;
+import Entity07223.BarangKeluarEntity07223;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
-/**
- *
- * @author LENOVO
- */
-public class ModelBarangKeluar07223 implements Interfaces07223 {
-    private ArrayList<BarangKeluar07223> BarangKeluar07223ArrayList;
+
+public class ModelBarangKeluar07223 implements InterfacesModel07223 {
+    private ArrayList<BarangKeluarEntity07223> BarangKeluar07223ArrayList;
 
     public ModelBarangKeluar07223() {
-        BarangKeluar07223ArrayList = new ArrayList<BarangKeluar07223>();
+        BarangKeluar07223ArrayList = new ArrayList<BarangKeluarEntity07223>();
     }
 
-    public void insert(BarangKeluar07223 barangkeluar07223) {
+    public void insert(BarangKeluarEntity07223 barangkeluar07223) {
         BarangKeluar07223ArrayList.add(barangkeluar07223);
     }
     
-    public void update(int index, BarangKeluar07223 barangKeluar07223) {
-        BarangKeluar07223ArrayList.set(index,(BarangKeluar07223) barangKeluar07223);
+    public void update(int index, BarangKeluarEntity07223 barangKeluar07223) {
+        BarangKeluar07223ArrayList.set(index,(BarangKeluarEntity07223) barangKeluar07223);
     }
 
     public void remove(int index) {
@@ -33,7 +30,7 @@ public class ModelBarangKeluar07223 implements Interfaces07223 {
             System.out.println("Data Barang Keluar Kosong!");
         } else {
             int i=0;
-            for (BarangKeluar07223 barangkeluar07223 : BarangKeluar07223ArrayList) {
+            for (BarangKeluarEntity07223 barangkeluar07223 : BarangKeluar07223ArrayList) {
                 System.out.println("\nData Barang Ke "+i);
                 System.out.println("===============================================================");
                 System.out.println(" Kode Barang : " + barangkeluar07223.getKode()
@@ -56,7 +53,7 @@ public class ModelBarangKeluar07223 implements Interfaces07223 {
         return loop;
     }
     
-    public BarangKeluar07223 getBarangKeluarArrayList(int index){
+    public BarangKeluarEntity07223 getBarangKeluarArrayList(int index){
         return BarangKeluar07223ArrayList.get(index);
     }
 }
