@@ -7,6 +7,17 @@ public class NamaAdminEntity07223 {
        this.Admin = Admin;
        this.Password = Password;
     }
+    
+    public NamaAdminEntity07223() {
+    }
+
+    public void setAdmin(String Admin) {
+        this.Admin = Admin;
+    }
+
+    public void setPassword(String Password) {
+        this.Password = Password;
+    }
 
     public String getAdmin() {
         return Admin;

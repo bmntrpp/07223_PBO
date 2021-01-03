@@ -11,6 +11,11 @@ public class ModelBarangKeluar07223 implements InterfacesModel07223 {
     public ModelBarangKeluar07223() {
         BarangKeluar07223ArrayList = new ArrayList<BarangKeluarEntity07223>();
     }
+    
+    // get jumlah data
+    public int viewAll() {
+        return BarangKeluar07223ArrayList.size();
+    }
 
     // insert data barang, dengan parameter object barang
     public void insert(BarangKeluarEntity07223 barangkeluar07223) {
@@ -25,28 +30,6 @@ public class ModelBarangKeluar07223 implements InterfacesModel07223 {
     // delete data barang, dengan parameter index data
     public void remove(int index) {
         BarangKeluar07223ArrayList.remove(index);
-    }
-
-    // view data barang, penerapan polymorpisme (overriding)
-    @Override
-    public void view() {
-        // pengujian jika data kosong atau tidak
-        if(BarangKeluar07223ArrayList.isEmpty()) {
-            System.out.println("Data Barang Keluar Kosong!");
-        } else {
-            int i=0;
-            for (BarangKeluarEntity07223 barangkeluar07223 : BarangKeluar07223ArrayList) {
-                System.out.println("\nData Barang Ke "+i);
-                System.out.println("===============================================================");
-                System.out.println(" Kode Barang : " + barangkeluar07223.getKode()
-                        + "\n Jenis Barang : " + barangkeluar07223.getJenis()
-                        + "\n Harga Barang : " + barangkeluar07223.getHarga()
-                        + "\n Tanggal Barang : " + new SimpleDateFormat("dd-MM-yyyy").format(barangkeluar07223.getTanggal())
-                        + "\n Kota : " + barangkeluar07223.getKota());
-                System.out.println("===============================================================");
-                i++;
-            }
-        }
     }
 
     // cek data barang, penerapan polymorpisme (overriding)

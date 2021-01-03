@@ -68,11 +68,9 @@ public class Main_07223 {
                } else if (pilih == 2) {
                    BarangKeluar();
                } else if (pilih == 3) {
-                   // memanggil method view barang masuk melalui controller
-                  barangMasuk.viewBarang();
+                  viewBarangMasuk();
                } else if (pilih == 4) {
-                   // memanggil method view barang keluar melalui controller
-                  barangKeluar.viewBarang();
+                  viewBarangKeluar();
                } else if (pilih == 5) {
                    UpdateBarangMasuk();
                } else if (pilih == 6) {
@@ -102,7 +100,7 @@ public class Main_07223 {
         Date tanggal = new Date(input.next());
         System.out.print("Gudang = ");
         String gudang = input.next();
-        barangMasuk.insertBarang(new BarangMasukEntity07223(kode, jenis, harga,tanggal,gudang));
+        barangMasuk.insertBarang(kode,jenis,harga,tanggal,gudang);
     }
     
     // method insert data barang keluar
@@ -117,12 +115,12 @@ public class Main_07223 {
        Date tanggal = new Date(input.next());
        System.out.print("Kota = ");
        String kota = input.next();
-       barangKeluar.insertBarang(new BarangKeluarEntity07223(kode, jenis, harga,tanggal, kota));
+       barangKeluar.insertBarang(kode,jenis,harga,tanggal,kota);
     } 
      
     // method update data barang masuk
     static void UpdateBarangMasuk(){
-        barangMasuk.viewBarang();
+        viewBarangMasuk();
         System.out.print("Index Barang Ke : ");
         int index = input.nextInt();
         System.out.print("Input Kode = ");
@@ -135,12 +133,12 @@ public class Main_07223 {
         Date tanggal = new Date(input.next());
         System.out.print("Gudang = ");
         String gudang = input.next();
-        barangMasuk.updateBarang(index, new BarangMasukEntity07223(kode, jenis, harga,tanggal,gudang)); 
+        barangMasuk.updateBarang(index,kode,jenis,harga,tanggal,gudang); 
     }
      
     // method update data barang keluar
     static void UpdateBarangKeluar(){
-        barangKeluar.viewBarang();
+        viewBarangKeluar();
         System.out.print("Index Barang Ke : ");
         int index = input.nextInt();
         System.out.print("Input Kode = ");
@@ -153,12 +151,12 @@ public class Main_07223 {
         Date tanggal = new Date(input.next());
         System.out.print("Kota = ");
         String kota = input.next();
-        barangKeluar.updateBarang(index, new BarangKeluarEntity07223(kode, jenis, harga,tanggal,kota)); 
+        barangKeluar.updateBarang(index,kode,jenis,harga,tanggal,kota); 
     }
     
     // method delete data barang masuk
     static void HapusBarangMasuk() {
-        barangMasuk.viewBarang();
+        viewBarangMasuk();
         System.out.print("Index Barang Ke : ");
         int index = input.nextInt();
         barangMasuk.removeBarang(index);
@@ -166,9 +164,47 @@ public class Main_07223 {
     
     // method delete data barang keluar
     static void HapusBarangKeluar() {
-        barangKeluar.viewBarang();
+        viewBarangKeluar();
         System.out.print("Index Barang Ke : ");
         int index = input.nextInt();
         barangKeluar.removeBarang(index);
+    }
+    
+    // method view data barang masuk
+    static void viewBarangMasuk() {
+        int size = barangMasuk.view();
+        if(size == 0) {
+            System.out.println("Data Barang Masuk Kosong!");
+        } else {
+            for (int i=0;i<size;i++) {
+                System.out.println("\nData Barang Ke "+i);
+                System.out.println("===============================================================");
+                System.out.println(" Kode Barang : " + barangMasuk.getData(i).getKode()
+                        + "\n Jenis Barang : " + barangMasuk.getData(i).getJenis()
+                        + "\n Harga Barang : " + barangMasuk.getData(i).getHarga()
+                        + "\n Tanggal Barang : " + new SimpleDateFormat("dd-MM-yyyy").format(barangMasuk.getData(i).getTanggal())
+                        + "\n Gudang : " + barangMasuk.getData(i).getGudang());
+                System.out.println("===============================================================");
+            }
+        }
+    }
+    
+    // method view data barang keluar
+    static void viewBarangKeluar() {
+        int size = barangKeluar.view();
+        if(size == 0) {
+            System.out.println("Data Barang Keluar Kosong!");
+        } else {
+            for (int i=0;i<size;i++) {
+                System.out.println("\nData Barang Ke "+i);
+                System.out.println("===============================================================");
+                System.out.println(" Kode Barang : " + barangKeluar.getData(i).getKode()
+                        + "\n Jenis Barang : " + barangKeluar.getData(i).getJenis()
+                        + "\n Harga Barang : " + barangKeluar.getData(i).getHarga()
+                        + "\n Tanggal Barang : " + new SimpleDateFormat("dd-MM-yyyy").format(barangKeluar.getData(i).getTanggal())
+                        + "\n Kota : " + barangKeluar.getData(i).getKota());
+                System.out.println("===============================================================");
+            }
+        }
     }
 }

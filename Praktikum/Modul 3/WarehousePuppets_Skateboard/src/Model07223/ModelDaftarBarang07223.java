@@ -23,26 +23,6 @@ public class ModelDaftarBarang07223 implements InterfacesModel07223 {
         return daftarBarang07223ArrayList;
     }
 
-    // view daftar barang, penerapan polymorpisme (overriding)
-    @Override
-    public void view() {
-         for (DaftarBarangEntity07223 daftarBarang07223 : daftarBarang07223ArrayList) {
-            System.out.println("===============================================================");
-            System.out.println(" Kode Barang : " + daftarBarang07223.getKeluar().getKode()
-                    + "\n Jenis Barang : " + daftarBarang07223.getKeluar().getJenis()
-                    + "\n Harga Barang : " + daftarBarang07223.getKeluar().getHarga()
-                    + "\n Tanggal Barang : " + new SimpleDateFormat("dd-MM-yyyy").format(daftarBarang07223.getKeluar().getTanggal())
-                    + "\n Nama Admin : " + modeladmin.getListNamaAdmin07223().get(daftarBarang07223.getIndexBarang())
-                    + "\n IsVerified : ");
-            if (daftarBarang07223.isVerified() == false) {
-                System.out.println("Belum Di Verifikasi Admin");
-            } else {
-                System.out.println("Telah Di Verifikasi");
-            }
-            System.out.println("===============================================================");
-        }
-    }
-
     // cek daftar barang, penerapan polymorpisme (overriding)
     @Override
     public int cekData(String kode) {

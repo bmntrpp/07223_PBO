@@ -9,11 +9,6 @@ public class DaftarBarangController07223 {
     public DaftarBarangController07223() {
     }
     
-    // menampilkan daftar barang
-    public void viewBarang() {
-        AllObjectModel07223.daftarBarangModel.view();
-    }
-    
     // mengambil daftar barang
     public DaftarBarangEntity07223 daftarBarangEntity(int indexLogin) {
         return AllObjectModel07223.daftarBarangModel.showDaftarBarang(indexLogin);

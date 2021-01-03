@@ -1,9 +1,7 @@
 package Controller07223;
 
 import Entity07223.NamaAdminEntity07223;
-import Entity07223.BarangKeluarEntity07223;
 import java.util.Date;
-import java.util.ArrayList;
 
 public class AdminController07223 implements ControllerInterface07223{    
     public AdminController07223(){
@@ -16,7 +14,10 @@ public class AdminController07223 implements ControllerInterface07223{
 
         for(int i = 0; i < Admin.length; i++) {
             // proses insert data dari view(main) -> controller -> model
-            AllObjectModel07223.adminModel.insertAdmin(new NamaAdminEntity07223(Admin[i],Password[i]));
+            NamaAdminEntity07223 namaAdmin = new NamaAdminEntity07223();
+            namaAdmin.setAdmin(Admin[i]);
+            namaAdmin.setPassword(Password[i]);
+            AllObjectModel07223.adminModel.insertAdmin(namaAdmin);
         }
     }
 

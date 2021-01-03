@@ -9,6 +9,9 @@ public class BarangMasukEntity07223 extends AbstractBarangEntity07223 {
         super (kode,jenis,harga,tanggal);
         this.gudang = gudang;
     }
+    
+    public BarangMasukEntity07223() {
+    }
 
     @Override
 
