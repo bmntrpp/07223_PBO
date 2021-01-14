@@ -4,6 +4,7 @@ import Entity07223.NamaAdminEntity07223;
 import java.util.Date;
 
 public class AdminController07223 implements ControllerInterface07223{    
+    int indexLogin = 0;
     public AdminController07223(){
     }
     
@@ -23,5 +24,9 @@ public class AdminController07223 implements ControllerInterface07223{
 
     @Override
     public void login(String Admin, String Password) {
+        indexLogin = AllObjectModel07223.adminModel.cekData(Admin,Password);
+    }
+    public NamaAdminEntity07223 adminEntity() {
+        return AllObjectModel07223.adminModel.showData(indexLogin);
     }
 }

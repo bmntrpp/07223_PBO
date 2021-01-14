@@ -20,4 +20,12 @@ public class ModelNamaAdmin07223 {
     public void insertAdmin(NamaAdminEntity07223 admin) {
         NamaAdmin07223ArrayList.add(admin);
     }
+
+    public int cekData(String Admin, String Password) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public NamaAdminEntity07223 showData(int indexLogin) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

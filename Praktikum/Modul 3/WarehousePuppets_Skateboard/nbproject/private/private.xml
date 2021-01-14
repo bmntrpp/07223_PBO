@@ -3,20 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/aldo/Documents/07223_PBO/Praktikum/Modul%203/WarehousePuppets_Skateboard/src/Model07223/InterfacesModel07223.java</file>
-            <file>file:/home/aldo/Documents/07223_PBO/Praktikum/Modul%203/WarehousePuppets_Skateboard/src/Model07223/ModelBarangKeluar07223.java</file>
+            <file>file:/home/aldo/Documents/07223_PBO/Praktikum/Modul%203/WarehousePuppets_Skateboard/src/View07223/AdminGUI07223.java</file>
             <file>file:/home/aldo/Documents/07223_PBO/Praktikum/Modul%203/WarehousePuppets_Skateboard/src/warehousePuppets_Skateboard07223/Main_07223.java</file>
-            <file>file:/home/aldo/Documents/07223_PBO/Praktikum/Modul%203/WarehousePuppets_Skateboard/src/Entity07223/BarangKeluarEntity07223.java</file>
-            <file>file:/home/aldo/Documents/07223_PBO/Praktikum/Modul%203/WarehousePuppets_Skateboard/src/Controller07223/AdminController07223.java</file>
-            <file>file:/home/aldo/Documents/07223_PBO/Praktikum/Modul%203/WarehousePuppets_Skateboard/src/Entity07223/BarangMasukEntity07223.java</file>
-            <file>file:/home/aldo/Documents/07223_PBO/Praktikum/Modul%203/WarehousePuppets_Skateboard/src/Model07223/ModelDaftarBarang07223.java</file>
-            <file>file:/home/aldo/Documents/07223_PBO/Praktikum/Modul%203/WarehousePuppets_Skateboard/src/Controller07223/BarangKeluarController07223.java</file>
-            <file>file:/home/aldo/Documents/07223_PBO/Praktikum/Modul%203/WarehousePuppets_Skateboard/src/Controller07223/BarangMasukController07223.java</file>
-            <file>file:/home/aldo/Documents/07223_PBO/Praktikum/Modul%203/WarehousePuppets_Skateboard/src/Entity07223/NamaAdminEntity07223.java</file>
-            <file>file:/home/aldo/Documents/07223_PBO/Praktikum/Modul%203/WarehousePuppets_Skateboard/src/Model07223/ModelBarangMasuk07223.java</file>
-            <file>file:/home/aldo/Documents/07223_PBO/Praktikum/Modul%203/WarehousePuppets_Skateboard/src/Controller07223/ControllerInterface07223.java</file>
-            <file>file:/home/aldo/Documents/07223_PBO/Praktikum/Modul%203/WarehousePuppets_Skateboard/src/Controller07223/DaftarBarangController07223.java</file>
-            <file>file:/home/aldo/Documents/07223_PBO/Praktikum/Modul%203/WarehousePuppets_Skateboard/src/Controller07223/AllObjectModel07223.java</file>
+            <file>file:/home/aldo/Documents/07223_PBO/Praktikum/Modul%203/WarehousePuppets_Skateboard/src/View07223/GUI07223.java</file>
+            <file>file:/home/aldo/Documents/07223_PBO/Praktikum/Modul%203/WarehousePuppets_Skateboard/src/View07223/allobjctrl07223.java</file>
         </group>
     </open-files>
 </project-private>

@@ -1,7 +1,9 @@
 package Controller07223;
 
 import Entity07223.*;
+import java.text.SimpleDateFormat;
 import java.util.Date;
+import javax.swing.table.DefaultTableModel;
 
 public class BarangMasukController07223 {
     int indexLogin = 0;
@@ -49,5 +51,22 @@ public class BarangMasukController07223 {
     // mengambil data barang melalui model
     public BarangMasukEntity07223 barangMasukEntity() {
         return AllObjectModel07223.barangMasukModel.showDataBarang(indexLogin);
+    }
+     public DefaultTableModel barangmasuk() {
+        DefaultTableModel dtmbarangmasuk = new DefaultTableModel();
+        Object[] kolom = {"No","Kode","Jenis","Harga","Tanggal","Gudang"};
+        dtmbarangmasuk.setColumnIdentifiers(kolom);
+        int size = AllObjectModel07223.barangMasukModel.viewAll();
+        for(int i=0;i<size;i++) {
+            Object[] data = new Object[6];
+            data[0] = i;
+            data[1] = AllObjectModel07223.barangMasukModel.showDataBarang(i).getKode();
+            data[2] = AllObjectModel07223.barangMasukModel.showDataBarang(i).getJenis();
+            data[3] = AllObjectModel07223.barangMasukModel.showDataBarang(i).getHarga();
+            data[4] = new SimpleDateFormat("dd-MM-yyyy").format(AllObjectModel07223.barangMasukModel.showDataBarang(i).getTanggal());
+            data[5] = AllObjectModel07223.barangMasukModel.showDataBarang(i).getGudang();
+            dtmbarangmasuk.addRow(data);
+        }
+        return dtmbarangmasuk;
     }
 }

@@ -1,7 +1,10 @@
 package Controller07223;
 
 import Entity07223.*;
+import View07223.BarangKeluarGUI07223;
+import java.text.SimpleDateFormat;
 import java.util.Date;
+import javax.swing.table.DefaultTableModel;
 
 public class BarangKeluarController07223 {
     int indexLogin = 0;
@@ -49,5 +52,26 @@ public class BarangKeluarController07223 {
     // mengambil data barang melalui model
     public BarangKeluarEntity07223 barangKeluarEntity() {
         return AllObjectModel07223.barangKeluarModel.showDataBarang(indexLogin);
+    }
+    public DefaultTableModel barangkeluar() {
+        DefaultTableModel dtmbarangkeluar = new DefaultTableModel();
+        Object[] kolom = {"No","Kode","Jenis","Harga","Tanggal","Kota"};
+        dtmbarangkeluar.setColumnIdentifiers(kolom);
+        int size = AllObjectModel07223.barangKeluarModel.viewAll();
+        for(int i=0;i<size;i++) {
+            Object[] data = new Object[6];
+            data[0] = i;
+            data[1] = AllObjectModel07223.barangKeluarModel.showDataBarang(i).getKode();
+            data[2] = AllObjectModel07223.barangKeluarModel.showDataBarang(i).getJenis();
+            data[3] = AllObjectModel07223.barangKeluarModel.showDataBarang(i).getHarga();
+            data[4] = new SimpleDateFormat("dd-MM-yyyy").format(AllObjectModel07223.barangKeluarModel.showDataBarang(i).getTanggal());
+            data[5] = AllObjectModel07223.barangKeluarModel.showDataBarang(i).getKota();
+            dtmbarangkeluar.addRow(data);
+        }
+        return dtmbarangkeluar;
+    }
+
+    public void updateBarang(int index, BarangKeluarEntity07223 barangKeluarEntity07223) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
